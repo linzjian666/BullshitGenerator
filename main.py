@@ -60,7 +60,7 @@ def 狗屁不通生成器(theme):
 
 def 狗屁稍通生成器(theme):
 ##    openai.api_base = 'https://api.openai.com/v1/chat/completions'
-    openai.api_key = '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'
+    openai.api_key = 'OPEN-API-KEY'
     model_engine = "text-davinci-003"
     prompt = "请以《theme》为题写一篇议论性文章，1200字左右，可以举一些名人名言和名人事迹进行论证，请在认真思考后输出，只输出文章内容而不输出其他内容"
     prompt = prompt.replace("theme",theme)
