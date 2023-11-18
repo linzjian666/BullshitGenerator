@@ -1,5 +1,8 @@
 #!/usr/bin/python
 # -*- coding: UTF-8 -*-
+# @Author  : Linzjian666
+# @Time    : 2023/11/18 11:45
+# @Function: Generate Bullshit
 
 import os, re
 import random
