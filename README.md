@@ -1,5 +1,7 @@
 # 议论性(狗屁不通)文章生成器
 # BullshitGenerator
+
+`main.py`与`chatnio.py`区别
 ---
 `main.py`使用OPENAI官方API接口
 
