@@ -62,20 +62,24 @@ def 狗屁不通生成器(theme):
     return tmp
 
 def 狗屁稍通生成器(theme):
-##    openai.api_base = 'https://api.openai.com/v1/chat/completions'
-    openai.api_key = 'OPEN-API-KEY'
-    model_engine = "text-davinci-003"
-    prompt = "请以《theme》为题写一篇议论性文章，1200字左右，可以举一些名人名言和名人事迹进行论证，请在认真思考后输出，只输出文章内容而不输出其他内容"
-    prompt = prompt.replace("theme",theme)
-    completions = openai.Completion.create(
-        engine=model_engine,
-        prompt=prompt,
-        max_tokens=2000,
-        n=1,
-        stop=None,
-        temperature=0.7,
-    )
-    tmp = completions.choices[0].text
+    api_key = 'YOUR-OPENAI-API-KEY'
+    prompt = [
+        {"role": "user", "content": f"请以“{theme}”为主题题写一篇议论性文章，1200字左右，可以举一些名人名言和名人事迹进行论证，题目可自拟，请在认真思考后输出，只输出文章标题和文章内容而不输出其他内容，输出标题格式：《文章标题》"}
+    ]
+    data = {
+        "model": "gpt-3.5-turbo-16k",
+        "messages": prompt
+    }
+    headers = {
+        "Authorization": f"Bearer {api_key}",
+        "Content-Type": "application/json"
+    }
+    response = requests.post("https://api.openai.com/v1/chat/completions", data=json.dumps(data), headers=headers)
+    if response.status_code == 200:
+        response_data = response.json()
+        tmp = response_data['choices'][0]['message']['content']
+    else:
+        tmp = f"Error: {response.status_code} {response.text}"
     return tmp
 
 
