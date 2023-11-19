@@ -62,7 +62,7 @@ def 狗屁不通生成器(theme):
     return tmp
 
 def 狗屁稍通生成器(theme):
-    api_key = 'CHATNIO-API-KEY'
+    api_key = 'YOUR-CHATNIO-API-KEY'
     prompt = [
         {"role": "user", "content": f"请以“{theme}”为主题题写一篇议论性文章，1200字左右，可以举一些名人名言和名人事迹进行论证，题目可自拟，请在认真思考后输出，只输出文章标题和文章内容而不输出其他内容，输出标题格式：《文章标题》"}
     ]
