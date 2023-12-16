@@ -7,8 +7,3 @@
 `chatnio.py`改用Chatnio API接口
 
 ---
-请安装`requests` `random`库
-```
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple requests
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple random
-```
