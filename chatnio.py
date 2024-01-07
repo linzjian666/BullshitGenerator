@@ -96,7 +96,7 @@ if __name__ == "__main__":
     elif mode == '2':
         print("AI玩命生成文章ing，请稍等...")
         tmp += 狗屁稍通生成器(theme)
-    os.system("cls")
+    os.system("cls" if os.name == "nt" else "clear")
     print("生成内容如下:\r\n\r\n"+tmp+"\r\n\r\n")
     with open('output.txt', 'w', encoding='utf-8') as f:
             f.write(tmp)
